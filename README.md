@@ -9,7 +9,7 @@
 
 ## Tecnologías Utilizadas
 
-- **Backend:** Node.js.
+- **Backend:** Node.js con Express.
 - **Frontend:** React con Vite.
 - **Almacenamiento:** En memoria (sin base de datos).
 
@@ -24,7 +24,10 @@
  cd <NOMBRE_DEL_REPOSITORIO>
 ```
 
-### 2. Ejecutar el Backend
+### 2. Configuración del Entorno y Ejecución del Backend
+
+Crear un archivo `.env` (Seguir la estructura de `backEnd\.env.example`) en la carpeta `backEnd` y definir las variables necesarias:
+Luego, ejecutar los siguientes comandos:
 
 ```sh
  cd backend
@@ -34,12 +37,15 @@
 
 Por defecto, el backend correrá en `http://localhost:5000/`.
 
-### 3. Ejecutar el Frontend
+### 3. Configuración del Entorno y Ejecución del Frontend
+
+Crear un archivo `.env` (Seguir la estructura de `frontEnd\.env.example`) en la carpeta `frontEnd` y definir las variables necesarias:
+Luego, ejecutar los siguientes comandos:
 
 ```sh
  cd frontend
  npm install
- npm start
+ npm run dev
 ```
 
 Por defecto, el frontend estará disponible en `http://localhost:5173/` (o el puerto asignado por Vite/React).

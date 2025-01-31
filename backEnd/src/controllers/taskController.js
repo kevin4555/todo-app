@@ -10,16 +10,15 @@ export const getTasks = (req, res) => {
 };
 
 export const createTask = (req, res) => {
-  const { description, title } = req.body;
-  if (!title || !description) {
+  const { description } = req.body;
+  if (!description) {
     return res.status(400).json({
-      error: !title ? "El título es requerido" : "La descripción es requerida",
+      error: "La descripción es requerida",
     });
   }
 
   const newTask = {
     id: generateNewId(),
-    title,
     description,
     completed: false,
   };

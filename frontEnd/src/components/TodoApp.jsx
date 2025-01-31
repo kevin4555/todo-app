@@ -2,7 +2,6 @@ import { useState, useEffect } from "react";
 import Header from "./Header";
 import TodoInput from "./TodoInput";
 import TodoList from "./TodoList";
-import Footer from "./Footer";
 import axiosInstance from "../api/axios.js";
 
 const TodoApp = () => {
@@ -67,19 +66,9 @@ const TodoApp = () => {
     }
   };
 
-  /* const clearCompleted = async () => {
-    try {
-      await axiosInstance.delete("/tasks/completed");
-      setTasks(tasks.filter((task) => !task.completed));
-    } catch (err) {
-      console.error("Error al limpiar tareas completadas:", err);
-      setError("No se pudo limpiar las tareas completadas.");
-    }
-  }; */
-
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <div className="w-96 bg-white rounded-xl shadow-lg p-6">
+    <div className="min-h-screen flex items-center justify-center bg-amber-200 px-4">
+      <div className="w-full max-w-lg bg-white rounded-xl shadow-lg p-6 overflow-hidden">
         <Header />
         {error && <p className="text-red-500 text-center">{error}</p>}
         <TodoInput addTask={addTask} />
@@ -92,7 +81,6 @@ const TodoApp = () => {
             deleteTask={deleteTask}
           />
         )}
-        {/* <Footer clearCompleted={clearCompleted} /> */}
       </div>
     </div>
   );

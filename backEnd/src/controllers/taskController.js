@@ -33,7 +33,7 @@ export const completeTask = (req, res) => {
   if (!task) {
     return res.status(404).json({ error: "Tarea no encontrada" });
   }
-  task.completed = true;
+  task.completed = !task.completed;
   res.json(task);
 };
 

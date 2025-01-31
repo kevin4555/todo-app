@@ -3,6 +3,7 @@ import Header from "./Header";
 import TodoInput from "./TodoInput";
 import TodoList from "./TodoList";
 import axiosInstance from "../api/axios.js";
+import { FaSpinner } from "react-icons/fa";
 
 const TodoApp = () => {
   const [tasks, setTasks] = useState([]);
@@ -73,7 +74,10 @@ const TodoApp = () => {
         {error && <p className="text-red-500 text-center">{error}</p>}
         <TodoInput addTask={addTask} />
         {loading ? (
-          <p className="text-center text-gray-500">Cargando tareas...</p>
+          <div className="flex justify-center items-center">
+            <FaSpinner className="animate-spin text-gray-500 text-2xl" />
+            <p className="text-center text-gray-500 ml-2">Cargando tareas...</p>
+          </div>
         ) : (
           <TodoList
             tasks={tasks}

@@ -15,7 +15,7 @@ const TodoInput = ({ addTask }) => {
     <form onSubmit={handleSubmit} className="flex items-center mb-6">
       <input
         type="text"
-        placeholder="What do you need to do?"
+        placeholder="¿Qué necesitas hacer?"
         value={task}
         onChange={(e) => setTask(e.target.value)}
         className="flex-grow px-4 py-3 rounded-l-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-orange-400 text-gray-700"

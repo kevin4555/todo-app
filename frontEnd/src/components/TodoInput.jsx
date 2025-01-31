@@ -12,9 +12,14 @@ const TodoInput = ({ addTask }) => {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="flex items-center mb-6">
+    <form
+      name="addTask"
+      onSubmit={handleSubmit}
+      className="flex items-center mb-6"
+    >
       <input
         type="text"
+        name="description"
         placeholder="¿Qué necesitas hacer?"
         value={task}
         onChange={(e) => setTask(e.target.value)}

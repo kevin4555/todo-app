@@ -30,7 +30,7 @@ Crear un archivo `.env` (Seguir la estructura de `backEnd\.env.example`) en la c
 Luego, ejecutar los siguientes comandos:
 
 ```sh
- cd backend
+ cd backEnd
  npm install
  npm start
 ```
@@ -43,7 +43,7 @@ Crear un archivo `.env` (Seguir la estructura de `frontEnd\.env.example`) en la 
 Luego, ejecutar los siguientes comandos:
 
 ```sh
- cd frontend
+ cd frontEnd
  npm install
  npm run dev
 ```
